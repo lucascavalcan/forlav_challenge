@@ -4,6 +4,14 @@
 
 <br>
 
+<p>Upload CSV file</p>
+<%= form_with url:import_sales_path, method: :post do |form|%>
+  <%= form.file_field :file, accept: ".csv"%>
+  <%= form.button "import"%>
+<% end %>
+
+<hr>
 <div>
   <%= link_to "Back to sales", sales_path %>
 </div>
+

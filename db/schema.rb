@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_21_143455) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_26_134212) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "companies", force: :cascade do |t|
-    t.string "company_name"
-    t.decimal "amount", precision: 10, scale: 2, default: "0.0"
+  create_table "revenues", force: :cascade do |t|
+    t.decimal "total"
+    t.decimal "amount", default: "0.0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_21_143455) do
     t.string "merchant_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.binary "data_file"
   end
 
 end

@@ -12,8 +12,8 @@
   <% end %>
 
   <div>
-    <%= form.label :purchase_name, style: "display: block" %>
-    <%= form.text_field :purchase_name %>
+    <%= form.label :purchaser_name, style: "display: block" %>
+    <%= form.text_field :purchaser_name %>
   </div>
 
   <div>
@@ -42,8 +42,6 @@
   </div>
 
   <hr>
-
-  <%= form.file_field :data_file %>
 
   <div>
     <%= form.submit 'Create sale', name: 'create_button' %>
