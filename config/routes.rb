@@ -9,6 +9,5 @@ Rails.application.routes.draw do
   
   resources :companies
   
-  # root to: 'sales#show', id: '1'
   root to: 'welcome#index' 
 end

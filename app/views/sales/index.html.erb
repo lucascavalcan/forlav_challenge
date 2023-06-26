@@ -10,5 +10,6 @@
     </p>
   <% end %>
 </div>
+<%= link_to "Home Page", welcome_index_path %>
 <p>Gross Income: <%= number_to_currency(@gross_income) %></p>
 <%= link_to "New sale", new_sale_path %>

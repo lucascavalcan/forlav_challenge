@@ -24,7 +24,7 @@ class SalesController < ApplicationController
     respond_to do |format|
       if @sale.save
         update_revenue(@sale.item_price * @sale.purchase_count)
-        format.html { redirect_to root_path, notice: "Sale was successfully created." }
+        format.html { redirect_to sales_path, notice: "Sale was successfully created." }
         format.json { render :show, status: :created, location: @sale }
       else
         format.html { render :new, status: :unprocessable_entity }
